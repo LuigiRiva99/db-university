@@ -19,7 +19,7 @@ Neuroscienze
 8. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
 sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
 nome
-
+    - SELECT * FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` ORDER BY `students`.`surname` ASC; 
 9. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
 10. Selezionare tutti i docenti che insegnano nel Dipartimento di
