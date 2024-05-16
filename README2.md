@@ -6,7 +6,7 @@
 3. Calcolare la media dei voti di ogni appello d'esame
     - SELECT `exams`.`date`, AVG(`exam_student`.`vote`) AS `media_voto` FROM `exam_student` INNER JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id` GROUP BY `exams`.`date`; 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
-
+    - SELECT `departments`.`name`, COUNT(*) AS `numero_corsi_di_laurea` FROM `departments` INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id` GROUP BY `departments`.`name`; 
 
 # QUERY con JOIN
 5. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
